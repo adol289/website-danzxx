@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosting Store - Domain & VPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hosting Store</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">Tentang Kami</a>
+                <a href="services.html">Layanan</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="domain-section" class="product-section">
+            <div class="container">
+                <h2>Domain Tersedia</h2>
+                <div class="product-list" id="domain-list">
+                    <!-- Daftar domain akan di-generate di sini menggunakan JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="vps-section" class="product-section">
+            <div class="container">
+                <h2>Paket VPS Tersedia</h2>
+                <div class="product-list" id="vps-list">
+                    <!-- Daftar VPS akan di-generate di sini menggunakan JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="checkout-section">
+            <div class="container">
+                <h2>Checkout</h2>
+                <form id="checkout-form" class="checkout-form">
+                    <label for="product-name">Nama Produk:</label>
+                    <input type="text" id="product-name" name="product-name" readonly>
+
+                    <label for="total-price">Total Harga:</label>
+                    <input type="text" id="total-price" name="total-price" readonly>
+
+                    <button type="submit" class="checkout-btn">Bayar Sekarang</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Hosting Store - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
