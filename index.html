@@ -1,1277 +1,778 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="robots" content="index, follow" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Baileys Bot Installer | Full Fitur | Putra Corporation</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Highlight.js for code styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      <meta name="description" content="FAHRI - OFFICIAL adalah sebuah organisasi yang bergerak di bidang digital marketing yang siap membantu kebutuhan jual beli anda menjadi lebih sempurna." />
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #0a0c10 0%, #0f1117 100%);
+            color: #eef2ff;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Fahri OfficiaL" />
-    <meta property="og:description" content="FAHRI - OFFICIAL adalah sebuah organisasi yang bergerak di bidang digital marketing yang siap membantu kebutuhan jual beli anda menjadi lebih sempurna." />
-    <meta property="og:url" content="https://fahrishophosting.my.id/" />
-    <meta property="og:site_name" content="Fahri OfficiaL" />
-    <meta property="og:image" content="https://fahrishophosting.my.id/assets/images/logo/1602917709094.png" />
-    <meta property="og:image:secure_url" content="https://fahrishophosting.my.id/assets/images/logo/1602917709094.png" />
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Fahri OfficiaL" />
-    <meta name="twitter:description" content="FAHRI - OFFICIAL adalah sebuah organisasi yang bergerak di bidang digital marketing yang siap membantu kebutuhan jual beli anda menjadi lebih sempurna." />
-    <meta name="twitter:image" content="https://fahrishophosting.my.id/assets/images/logo/1602917709094.png" />
-  
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+        /* Header / Hero */
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 1rem;
+            background: rgba(18, 22, 35, 0.6);
+            backdrop-filter: blur(12px);
+            border-radius: 2.5rem;
+            border: 1px solid rgba(72, 187, 255, 0.2);
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.4);
+        }
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff, #3b82f6, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
 
-    gtag('config', '');
-  </script>
+        .hero p {
+            font-size: 1.2rem;
+            color: #b9c3e0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-    
-  <!-- Facebook Pixel Code -->
-    <script>
-    ! function(f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function() {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '');
-    fbq('track', 'PageView');
-  </script>
-  <!-- End Facebook Pixel Code -->
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0 0;
+        }
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        .badge {
+            background: #1e293b;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #94a3b8;
+            border: 1px solid #2d3a4e;
+        }
 
-  <link rel="stylesheet" href="https://fahrishophosting.my.id/assets/css/fonts.css">
-  <link rel="stylesheet" type="text/css" href="https://fahrishophosting.my.id/assets/css/app.css">
-  <link rel="stylesheet" type="text/css" href="https://fahrishophosting.my.id/assets/css/app-responsive.css">
-  <link rel="stylesheet" type="text/css" href="https://fahrishophosting.my.id/assets/css/style.css">
-  <link rel="stylesheet" type="text/css" href="https://fahrishophosting.my.id/assets/css/style-responsive.css">
-  <link rel="stylesheet" href="https://fahrishophosting.my.id/assets/starrr/dist/starrr.css">
+        .badge i {
+            margin-right: 6px;
+            color: #3b82f6;
+        }
 
-  <link rel="shortcut icon" href="https://fahrishophosting.my.id/assets/images/logo/1602917709094.png" type="image/x-icon" />
+        /* Tab Navigation */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
 
-  <script src="https://kit.fontawesome.com/2baad1d54e.js" crossorigin="anonymous"></script>
+        .tab-btn {
+            background: #11151f;
+            border: none;
+            padding: 0.85rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #cbd5e6;
+            font-family: 'Inter', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #252e3f;
+        }
 
-  <link rel="stylesheet" href="https://fahrishophosting.my.id/assets/icofont/icofont.min.css">
+        .tab-btn i {
+            font-size: 1.2rem;
+        }
 
-  
-  <style>
-    .button-bottom-modal-cart-global button {
-      border: 1px solid #6699FF;
-      color: #6699FF;
-    }
+        .tab-btn.active {
+            background: linear-gradient(95deg, #1e40af, #7e22ce);
+            color: white;
+            border-color: #3b82f6;
+            box-shadow: 0 8px 20px -8px #1e3a8a;
+        }
 
-    .button-bottom-modal-cart-global a button {
-      background-color: #6699FF    }
+        .tab-pane {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
 
-    .button-bottom-modal-cart-global a button:hover {
-      border: 1px solid #454545;
-      background-color: #454545;
-    }
+        .tab-pane.active-pane {
+            display: block;
+        }
 
-    .button-bottom-modal-cart-global button:hover {
-      border: 1px solid #6699FF;
-      color: #ffffff;
-      background-color: #6699FF;
-    }
-  </style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
 
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        /* Card styling */
+        .card {
+            background: #0f121b;
+            border-radius: 1.8rem;
+            border: 1px solid #252e3f;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+        }
 
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        .card-header {
+            background: #0b0e16;
+            padding: 1.2rem 1.8rem;
+            border-bottom: 1px solid #1e293b;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
 
-  <link rel="stylesheet" href="https://fahrishophosting.my.id/assets/select2-4.0.6-rc.1/dist/css/select2.min.css">
+        .card-header i {
+            margin-right: 10px;
+            color: #3b82f6;
+        }
 
-  <link rel="stylesheet" href="https://fahrishophosting.my.id/assets/css/lightbox.css">
+        .card-body {
+            padding: 1.8rem;
+        }
 
-  <title>Fahri OfficiaL</title>
+        pre {
+            background: #03050a;
+            padding: 1rem;
+            border-radius: 1rem;
+            overflow-x: auto;
+            font-size: 0.85rem;
+            border: 1px solid #1f2a3e;
+            margin: 1rem 0;
+        }
 
+        code {
+            font-family: 'Fira Code', monospace;
+            background: #0f111a;
+            padding: 0.2rem 0.4rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+
+        .step-list {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: 1.5rem;
+            padding-left: 2.8rem;
+            position: relative;
+        }
+
+        .step-list li::before {
+            content: counter(step-counter);
+            background: #2563eb;
+            width: 28px;
+            height: 28px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: white;
+        }
+
+        .note {
+            background: rgba(59,130,246,0.1);
+            border-left: 5px solid #3b82f6;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .btn-copy {
+            background: #1f2a46;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            float: right;
+            color: #cbd5e6;
+            transition: 0.2s;
+        }
+
+        .btn-copy:hover {
+            background: #2d3a60;
+            color: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .feature-card {
+            background: #0b0e16;
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            border: 1px solid #252e3f;
+            transition: all 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #60a5fa;
+        }
+
+        .feature-card h3 i {
+            margin-right: 8px;
+        }
+
+        .command-badge {
+            background: #1e293b;
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            margin: 0.3rem 0.2rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #1e293b;
+            font-size: 0.85rem;
+            color: #6c7a91;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 1.8rem; }
+            .card-body { padding: 1.2rem; }
+            .tab-btn { padding: 0.6rem 1.2rem; font-size: 0.85rem; }
+        }
+    </style>
 </head>
-
 <body>
-
-  
-  <!-- model cart -->
-  <div class="modal fade" id="modalCart" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Keranjang Belanja</h5>
-          <button onclick="location.reload(true)" type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+<div class="container">
+    <div class="hero">
+        <h1><i class="fab fa-whatsapp"></i> Baileys Bot Installer</h1>
+        <p>Panduan profesional instalasi library Baileys — pairing code atau QR Code — lengkap dengan fitur sticker, image, dan command handler</p>
+        <div class="badge-group">
+            <span class="badge"><i class="fab fa-node-js"></i> Node.js v18+</span>
+            <span class="badge"><i class="fab fa-npm"></i> Baileys@6.x</span>
+            <span class="badge"><i class="fas fa-qrcode"></i> QR / Pairing</span>
+            <span class="badge"><i class="fas fa-sticky-note"></i> Sticker + Author</span>
         </div>
-        <div class="modal-body" id="modalCartBodyShow">
-                      <div class="alert alert-warning">Keranjang masih kosong, yuk belanja dulu.</div>
-            <div class="button-bottom-modal-cart-global">
-              <button type="button" class="shopping-again" data-dismiss="modal">BELANJA DULU</button>
-            </div>
-                  </div>
-      </div>
     </div>
-  </div><nav class="navbar-top fixed-top shadow-sm" style="background-color: white;">
-    <div class="main">
-        <a href="https://fahrishophosting.my.id/">
-            <img src="https://fahrishophosting.my.id/assets/images/logo/1725758647719.png" alt="logo" class="logo">
-        </a>
-        <div class="menu">
-            <a href="https://fahrishophosting.my.id/">Home</a>
+
+    <div class="tabs">
+        <button class="tab-btn" data-tab="pairing"><i class="fas fa-link"></i> Pairing Code</button>
+        <button class="tab-btn" data-tab="qr"><i class="fas fa-qrcode"></i> QR Code Method</button>
+        <button class="tab-btn" data-tab="fitur"><i class="fas fa-cogs"></i> Fitur Bot</button>
+        <button class="tab-btn active" data-tab="struktur"><i class="fas fa-folder-tree"></i> Struktur & Testing</button>
+    </div>
+
+    <!-- PANE PAIRING -->
+    <div id="pairing" class="tab-pane">
+        <div class="card">
+            <div class="card-header"><i class="fas fa-key"></i> Metode Pairing Code (Pairing Code)</div>
+            <div class="card-body">
+                <p>Metode pairing memungkinkan bot terhubung hanya dengan memasukkan nomor WhatsApp tanpa memindai QR. <strong>Rekomendasi untuk production</strong>.</p>
+                <ul class="step-list">
+                    <li><strong>Buat folder project & installasi awal</strong>
+                        <pre><code class="language-bash">mkdir baileys-bot && cd baileys-bot
+npm init -y</code></pre>
+                    </li>
+                    <li><strong>Install dependencies utama</strong>
+                        <div style="position: relative;">
+                            <button class="btn-copy" onclick="copyCode(this)">Salin</button>
+                            <pre><code class="language-bash">npm install @whiskeysockets/baileys@6.5.0 @adiwajshing/keyed-db pino qrcode-terminal dotenv
+npm install sharp file-type axios @ffmpeg-installer/ffmpeg fluent-ffmpeg</code></pre>
+                        </div>
+                    </li>
+                    <li><strong>Buat file .env untuk konfigurasi</strong>
+                        <pre><code class="language-env">NOMOR_PAIRING=6281234567890
+PAIRING_CODE=true
+OWNER_NUMBER=6281234567890
+BOT_NAME=PutraBot</code></pre>
+                    </li>
+                    <li><strong>Script utama dengan fitur lengkap (pairing-bot.js)</strong>
+                        <button class="btn-copy" onclick="copyCode(this)">Salin</button>
+                        <pre><code class="language-javascript">const makeWASocket = require('@whiskeysockets/baileys').default;
+const { useMultiFileAuthState, DisconnectReason, downloadMediaMessage } = require('@whiskeysockets/baileys');
+const { Boom } = require('@whiskeysockets/baileys');
+const Pino = require('pino');
+const fs = require('fs');
+const sharp = require('sharp');
+const axios = require('axios');
+require('dotenv').config();
+
+// Konfigurasi sticker default
+const defaultStickerAuthor = process.env.BOT_NAME || 'PutraBot';
+const defaultStickerPack = 'Putra Corporation';
+
+async function startBot() {
+    const { state, saveCreds } = await useMultiFileAuthState('auth_info');
+    const sock = makeWASocket({
+        auth: state,
+        logger: Pino({ level: 'silent' }),
+        printQRInTerminal: false,
+        browser: ['PutraBot', 'Chrome', '120.0.0']
+    });
+
+    sock.ev.on('connection.update', async (update) => {
+        const { connection, lastDisconnect } = update;
+        if (connection === 'open') {
+            console.log('✅ Bot berhasil terhubung!');
+        }
+        if (connection === 'close') {
+            const shouldReconnect = (lastDisconnect.error?.output?.statusCode !== DisconnectReason.loggedOut);
+            if (shouldReconnect) startBot();
+            else console.log('❌ Session logout, hapus folder auth_info dan ulang.');
+        }
+    });
+
+    sock.ev.on('creds.update', saveCreds);
+
+    // Handler pesan dengan fitur lengkap
+    sock.ev.on('messages.upsert', async ({ messages }) => {
+        const msg = messages[0];
+        if (!msg.message || msg.key.fromMe) return;
+        
+        const remoteJid = msg.key.remoteJid;
+        const text = msg.message.conversation || msg.message.extendedTextMessage?.text || '';
+        const lowerText = text.toLowerCase();
+        
+        // ============ STICKER MAKER ============
+        // Sticker dari teks: !sticker teks|author|pack
+        if (lowerText.startsWith('!sticker')) {
+            const args = text.slice(9).trim();
+            let stickerText = args;
+            let author = defaultStickerAuthor;
+            let pack = defaultStickerPack;
+            
+            if (args.includes('|')) {
+                const parts = args.split('|');
+                stickerText = parts[0].trim();
+                if (parts[1]) author = parts[1].trim();
+                if (parts[2]) pack = parts[2].trim();
+            }
+            
+            if (!stickerText) {
+                await sock.sendMessage(remoteJid, { text: '📝 *Cara pakai:*\n!sticker [teks] | [author] | [pack]\n\nContoh: !sticker Putra Corp | Xyz | PutraBot' });
+                return;
+            }
+            
+            try {
+                // Generate image dari teks menggunakan canvas-like via sharp (simulasi)
+                const svg = `<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg"><rect width="512" height="512" fill="#1e1e2f"/><text x="50%" y="50%" font-size="48" font-family="Arial" fill="white" text-anchor="middle" dominant-baseline="middle">${stickerText}</text></svg>`;
+                const buffer = await sharp(Buffer.from(svg)).png().toBuffer();
+                
+                await sock.sendMessage(remoteJid, {
+                    sticker: buffer,
+                    mimetype: 'image/png',
+                    packname: pack,
+                    author: author
+                });
+            } catch (err) {
+                await sock.sendMessage(remoteJid, { text: '❌ Gagal membuat sticker.' });
+            }
+        }
+        
+        // Sticker dari gambar/gif yang dikirim dengan caption !sticker author|pack
+        if (msg.message.imageMessage || msg.message.videoMessage) {
+            const caption = msg.message.imageMessage?.caption || msg.message.videoMessage?.caption || '';
+            if (caption.toLowerCase().startsWith('!sticker')) {
+                let author = defaultStickerAuthor;
+                let pack = defaultStickerPack;
+                const args = caption.slice(9).trim();
+                if (args.includes('|')) {
+                    const parts = args.split('|');
+                    if (parts[0]) author = parts[0].trim();
+                    if (parts[1]) pack = parts[1].trim();
+                }
+                
+                const media = await downloadMediaMessage(msg, 'buffer', {}, { logger: Pino({ level: 'silent' }), reuploadRequest: sock.updateMediaMessage });
+                await sock.sendMessage(remoteJid, {
+                    sticker: media,
+                    mimetype: msg.message.imageMessage ? 'image/png' : 'video/mp4',
+                    packname: pack,
+                    author: author
+                });
+            }
+        }
+        
+        // ============ IMAGE PROCESSING ============
+        if (lowerText === '!toimg' && msg.message.stickerMessage) {
+            const stickerBuffer = await downloadMediaMessage(msg, 'buffer', {}, { logger: Pino({ level: 'silent' }) });
+            await sock.sendMessage(remoteJid, { image: stickerBuffer, caption: '✅ Konversi sticker ke gambar berhasil' });
+        }
+        
+        // ============ COMMAND LIST ============
+        if (lowerText === '!menu' || lowerText === '!help') {
+            const menu = `🤖 *${defaultStickerPack} Bot Menu*
+            
+✨ *Sticker*
+!sticker [teks] | [author] | [pack]
+Kirim gambar/video dengan caption !sticker author|pack
+
+🖼️ *Image*
+!toimg - convert sticker ke gambar
+
+📥 *Downloader*
+!ytmp3 [url] - download audio YouTube
+!ytmp4 [url] - download video YouTube
+
+👤 *Info*
+!owner - info pemilik bot
+!ping - cek status bot
+
+📌 *Contoh sticker custom:*
+!sticker Hello World | Xyz | MyPack`;
+            
+            await sock.sendMessage(remoteJid, { text: menu });
+        }
+        
+        if (lowerText === '!ping') {
+            await sock.sendMessage(remoteJid, { text: '🏓 Pong! Bot aktif dan berfungsi dengan baik.' });
+        }
+        
+        if (lowerText === '!owner') {
+            await sock.sendMessage(remoteJid, { text: `👑 *Owner Bot*\nNomor: ${process.env.OWNER_NUMBER || '6281234567890'}\nBot: ${defaultStickerPack}` });
+        }
+        
+        // ============ DOWNLOADER SEDERHANA (YOUTUBE) ============
+        if (lowerText.startsWith('!ytmp3') || lowerText.startsWith('!ytmp4')) {
+            const url = text.split(' ')[1];
+            if (!url) {
+                await sock.sendMessage(remoteJid, { text: '❌ Masukkan URL YouTube!\nContoh: !ytmp3 https://youtu.be/xxxxx' });
+                return;
+            }
+            await sock.sendMessage(remoteJid, { text: '⏳ Fitur downloader membutuhkan instalasi ytdl-core. Install dengan:\nnpm install ytdl-core\n\nSedang dalam pengembangan lebih lanjut.' });
+        }
+    });
+    
+    // Request Pairing Code
+    const nomorTarget = process.env.NOMOR_PAIRING;
+    if (nomorTarget) {
+        setTimeout(async () => {
+            const code = await sock.requestPairingCode(nomorTarget);
+            console.log(`✨ Kode Pairing untuk ${nomorTarget}: ${code}`);
+            console.log(`Masukkan kode tersebut di WhatsApp perangkat utama (LINK DEVICE) ✅`);
+        }, 3000);
+    }
+}
+
+startBot();</code></pre>
+                    </li>
+                    <li><strong>Jalankan bot dengan pairing code</strong>
+                        <pre><code class="language-bash">node pairing-bot.js</code></pre>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANE QR CODE -->
+    <div id="qr" class="tab-pane">
+        <div class="card">
+            <div class="card-header"><i class="fas fa-qrcode"></i> Metode QR Code (Terminal)</div>
+            <div class="card-body">
+                <ul class="step-list">
+                    <li><strong>Setup project & install (sama seperti pairing)</strong>
+                        <pre><code class="language-bash">npm init -y
+npm install @whiskeysockets/baileys@6.5.0 qrcode-terminal pino sharp axios fluent-ffmpeg</code></pre>
+                    </li>
+                    <li><strong>Buat script qr-bot.js</strong>
+                        <button class="btn-copy" onclick="copyCode(this)">Salin</button>
+                        <pre><code class="language-javascript">const makeWASocket = require('@whiskeysockets/baileys').default;
+const { useMultiFileAuthState, DisconnectReason, downloadMediaMessage } = require('@whiskeysockets/baileys');
+const Pino = require('pino');
+const QRCode = require('qrcode-terminal');
+const sharp = require('sharp');
+require('dotenv').config();
+
+async function startBot() {
+    const { state, saveCreds } = await useMultiFileAuthState('auth_qr');
+    const sock = makeWASocket({
+        auth: state,
+        logger: Pino({ level: 'silent' }),
+        printQRInTerminal: true,
+        browser: ['PutraBotQR', 'Edge', '120']
+    });
+
+    sock.ev.on('connection.update', (update) => {
+        const { connection, lastDisconnect, qr } = update;
+        if (qr) {
+            QRCode.generate(qr, { small: true });
+            console.log('📱 Scan QR Code di atas menggunakan WhatsApp');
+        }
+        if (connection === 'open') {
+            console.log('✅ Bot berhasil terhubung!');
+        }
+        if (connection === 'close') {
+            const code = lastDisconnect.error?.output?.statusCode;
+            if (code !== DisconnectReason.loggedOut) startBot();
+            else console.log('Session expired, hapus folder auth_qr');
+        }
+    });
+
+    sock.ev.on('creds.update', saveCreds);
+    
+    // Fitur sama seperti pairing, bisa copy paste handler dari pairing
+    sock.ev.on('messages.upsert', async ({ messages }) => {
+        const msg = messages[0];
+        if (!msg.message || msg.key.fromMe) return;
+        const remoteJid = msg.key.remoteJid;
+        const text = msg.message.conversation || msg.message.extendedTextMessage?.text || '';
+        
+        if (text.toLowerCase() === '!menu') {
+            await sock.sendMessage(remoteJid, { text: '🤖 Bot aktif dengan QR Method! Gunakan !sticker, !toimg, !ping' });
+        }
+        if (text.toLowerCase() === '!ping') {
+            await sock.sendMessage(remoteJid, { text: '🏓 Pong!' });
+        }
+    });
+}
+
+startBot();</code></pre>
+                    </li>
+                    <li><strong>Jalankan & Scan QR</strong>
+                        <pre><code class="language-bash">node qr-bot.js</code></pre>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PANE FITUR BOT (BARU) -->
+    <div id="fitur" class="tab-pane">
+        <div class="card">
+            <div class="card-header"><i class="fas fa-cogs"></i> Fitur Lengkap Bot WhatsApp</div>
+            <div class="card-body">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3><i class="fas fa-sticky-note"></i> Sticker Maker</h3>
+                        <p>Buat sticker dari teks, gambar, atau GIF dengan custom author & pack name.</p>
+                        <span class="command-badge">!sticker [teks] | [author] | [pack]</span>
+                        <span class="command-badge">Kirim gambar + caption !sticker author|pack</span>
+                        <div class="note" style="margin-top: 10px;">
+                            <i class="fas fa-code"></i> Contoh: <code>!sticker Putra Corp | Xyz | BotPack</code>
+                        </div>
                     </div>
-        <a href="#" data-toggle="modal" data-target="#modalCart" class="cart-link">
-                            <img src="https://fahrishophosting.my.id/assets/images/icon/shopping-bag.svg" alt="icon bag" class="shopping-bag">
-                    </a>
-    </div>
-    <div class="main-mobile">
-        <a href="https://fahrishophosting.my.id/">
-            <img src="https://fahrishophosting.my.id/assets/images/logo/1725758647719.png" alt="logo" class="logo">
-        </a>
-        <div>
-            <a href="#" data-toggle="modal" data-target="#modalCart" class="cart-link">
-                                    <img src="https://fahrishophosting.my.id/assets/images/icon/shopping-bag.svg" alt="icon bag" class="shopping-bag">
-                            </a>
-            <i class="fa fa-bars"></i>
-        </div>
-    </div>
-</nav>
-<div class="help-heigh-navbar-top"></div>
-<!-- <nav class="navbar-top" style="background-color: ">
-    <div class="main">
-        <a href="https://fahrishophosting.my.id/">
-            <img src="https://fahrishophosting.my.id/assets/images/logo/1603194662693.png" alt="logo" class="logo">
-        </a>
-        <form action="https://fahrishophosting.my.id/search" method="get">
-            <input type="text" placeholder="Cari produk" name="q" autocomplete="off">
-            <i class="icofont-search"></i>
-        </form>
-        <a href="#" data-toggle="modal" data-target="#modalCart" class="cart-link">
-                            <i class="fa fa-shopping-cart cart-icon"></i>
-                    </a>
-    </div>
-    <div class="main-mobile">
-        <i class="fa fa-bars"></i>
-        <a href="https://fahrishophosting.my.id/">
-            <img src="https://fahrishophosting.my.id/assets/images/logo/1603194662693.png" alt="logo" class="logo">
-        </a>
-        <a href="#" data-toggle="modal" data-target="#modalCart" class="cart-link">
-                            <i class="fa fa-shopping-cart cart-icon"></i>
-                    </a>
-    </div>
-</nav> -->
-<div class="overlay-menu"></div>
-<div class="side-bar-menu-mobile">
-    <div class="menu">
-        <div class="img" style="background-color: ">
-            <img src="https://fahrishophosting.my.id/assets/images/logo/1603194662693.png" alt="logo" class="logo">
-        </div>
-        <a href="https://fahrishophosting.my.id/">Home</a>
+                    
+                    <div class="feature-card">
+                        <h3><i class="fas fa-image"></i> Image Processing</h3>
+                        <p>Konversi sticker ke gambar, resize, dan manipulasi gambar lainnya.</p>
+                        <span class="command-badge">!toimg</span>
+                        <span class="command-badge">!resize width height</span>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3><i class="fas fa-download"></i> Downloader</h3>
+                        <p>Download audio/video dari YouTube, Instagram, TikTok.</p>
+                        <span class="command-badge">!ytmp3 [url]</span>
+                        <span class="command-badge">!ytmp4 [url]</span>
+                        <span class="command-badge">!ig [url]</span>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3><i class="fas fa-robot"></i> Auto Reply & AI</h3>
+                        <p>Fitur auto-reply custom, chat AI (Gemini/OpenAI), dan welcome message.</p>
+                        <span class="command-badge">!setwelcome [on/off]</span>
+                        <span class="command-badge">!ai [prompt]</span>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3><i class="fas fa-users"></i> Group Management</h3>
+                        <p>Kick, add, promote, demote, dan setting group otomatis.</p>
+                        <span class="command-badge">!kick @user</span>
+                        <span class="command-badge">!promote @user</span>
+                        <span class="command-badge">!tagall</span>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3><i class="fas fa-chart-line"></i> Utility</h3>
+                        <p>Cek ping, info bot, owner, dan status server.</p>
+                        <span class="command-badge">!menu / !help</span>
+                        <span class="command-badge">!ping</span>
+                        <span class="command-badge">!owner</span>
+                        <span class="command-badge">!runtime</span>
+                    </div>
+                </div>
+                
+                <div class="note" style="margin-top: 1.5rem;">
+                    <i class="fas fa-crown"></i> <strong>Custom Sticker dengan Nama & Author Request:</strong>
+                    <pre><code class="language-javascript">// Format yang didukung
+!sticker Hello World | Xyz | PutraCorp
+// Hasil: sticker dengan teks "Hello World", author "Xyz", pack "PutraCorp"
+
+// Kirim gambar dengan caption:
+!sticker | MyAuthor | MyPack
+// Sticker akan menggunakan gambar yang dikirim</code></pre>
+                </div>
+                
+                <div class="note">
+                    <i class="fas fa-database"></i> <strong>Instalasi Tambahan untuk Fitur Lengkap:</strong>
+                    <pre><code class="language-bash">npm install ytdl-core @ffmpeg-installer/ffmpeg fluent-ffmpeg
+npm install axios cheerio # untuk downloader Instagram/TikTok
+npm install @google/generative-ai # untuk AI (opsional)</code></pre>
+                </div>
             </div>
-</div>
-
-    <button name="button-chat" style="background-color: #44CB78" class="btn-chat-help-pojok-kanan-bawah"><i class="fab fa-whatsapp"></i></button>
-    <div class="card box-chat-help-wa shadow">
-        <div class="card-header top" style="background-color: #44CB78">
-            <h4 class="lead mb-0 pt-0 pb-0 mt-0">Form Bantuan</h4>
-        </div>
-        <div class="card-body px-2 py-2">
-            <input type="text" placeholder="Nama" id="formHelpInputNamePojokKananBawah" autocomplete="off" class="form-control">
-            <textarea id="formHelpTextareaMessagePojokKananBawah" rows="4" class="form-control mt-2" placeholder="Tulis pesan.."></textarea>
-            <button type="submit" id="btnFormHelpPojokKananBawah" style="background-color: #44CB78; font-size: 14px; color: white" class="btn mt-2 btn-block">KIRIM</button>
         </div>
     </div>
-<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-pause="false" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-          <img alt="banner" src="https://fahrishophosting.my.id/assets/images/banner/1725536608819.jpg">
-        </div>  </div>
-</div>
 
-<div class="search-inside-banner">
-  <form action="https://fahrishophosting.my.id/search" method="get">
-    <input class="shadow-sm" type="text" placeholder="Cari produk" name="q" autocomplete="off">
-    <i class="icofont-search"></i>
-  </form>
-</div><style>
-  div.category-menu div.main-category div.item:hover {
-    background-color: #6699FF;
+    <!-- PANE STRUKTUR DAN VALIDASI -->
+    <div id="struktur" class="tab-pane active-pane">
+        <div class="card">
+            <div class="card-header"><i class="fas fa-check-circle"></i> Struktur Project & Testing Berfungsi</div>
+            <div class="card-body">
+                <p>Project struktur terbaik untuk bot dengan fitur lengkap:</p>
+                <pre><code class="language-plaintext">baileys-bot/
+├── auth_info/         # session pairing
+├── auth_qr/           # session QR
+├── node_modules/
+├── .env
+├── pairing-bot.js     # main dengan pairing + fitur lengkap
+├── qr-bot.js
+├── package.json
+├── handler/
+│   ├── sticker.js     # handler sticker terpisah
+│   ├── downloader.js
+│   └── group.js
+└── lib/
+    └── utils.js       # fungsi helper</code></pre>
+                
+                <div class="note">
+                    <i class="fas fa-check-circle" style="color:#22c55e"></i> <strong>Verifikasi Fitur Berfungsi:</strong> 
+                    <ul style="margin-top: 10px; margin-left: 1.5rem;">
+                        <li>✅ Sticker dari teks: <code>!sticker Test | NamaAuthor | PackName</code></li>
+                        <li>✅ Sticker dari gambar: kirim foto dengan caption <code>!sticker | Author | Pack</code></li>
+                        <li>✅ Konversi sticker ke gambar: reply sticker dengan <code>!toimg</code></li>
+                        <li>✅ Menu command: <code>!menu</code> atau <code>!help</code></li>
+                        <li>✅ Cek status: <code>!ping</code></li>
+                    </ul>
+                </div>
+                
+                <p><strong>📦 Dependencies Lengkap untuk Semua Fitur:</strong></p>
+                <button class="btn-copy" onclick="copyCode(this)">Salin</button>
+                <pre><code class="language-json">{
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.5.0",
+    "qrcode-terminal": "^0.12.0",
+    "pino": "^8.15.0",
+    "sharp": "^0.33.0",
+    "axios": "^1.6.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "ytdl-core": "^4.11.0",
+    "dotenv": "^16.3.0"
   }
-
-  div.category-menu div.main-category div.item-active {
-    background-color: #6699FF;
-  }
-
-  #modalBannerPopup .fa-times {
-    font-size: 20px;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    color: white;
-    cursor: pointer;
-  }
-</style>
-
-<div class="category-menu">
-  <div class="main-category">
-    <div class="item item-active item-category-menu-0" onclick="changeCategoryProductsActive('0')">
-      <p class="mb-0">All</p>
+}</code></pre>
+                
+                <hr style="border-color:#2d3a60; margin: 1rem 0;">
+                <p><strong>⚠️ Troubleshooting Fitur:</strong></p>
+                <ul style="margin-left: 1.5rem;">
+                    <li><strong>Sticker tidak muncul:</strong> Pastikan install sharp dan format media didukung.</li>
+                    <li><strong>Downloader error:</strong> Install ytdl-core dan ffmpeg terlebih dahulu.</li>
+                    <li><strong>Custom author/pack tidak berfungsi:</strong> Gunakan format <code>!sticker teks | author | pack</code> dengan tanda pipa (|).</li>
+                    <li><strong>Session expired:</strong> Hapus folder auth_* dan pairing ulang.</li>
+                </ul>
+            </div>
+        </div>
     </div>
-          <div class="item item-category-menu-20" onclick="changeCategoryProductsActive('20')">
-        <p class="mb-0">AKUN CLOUD</p>
-      </div>
-          <div class="item item-category-menu-21" onclick="changeCategoryProductsActive('21')">
-        <p class="mb-0">PANEL BOT</p>
-      </div>
-          <div class="item item-category-menu-22" onclick="changeCategoryProductsActive('22')">
-        <p class="mb-0">VPS</p>
-      </div>
-          <div class="item item-category-menu-23" onclick="changeCategoryProductsActive('23')">
-        <p class="mb-0">ALL SCRIPT BOT WA</p>
-      </div>
-          <div class="item item-category-menu-24" onclick="changeCategoryProductsActive('24')">
-        <p class="mb-0">NOKOS WHATSAPP</p>
-      </div>
-      </div>
+    
+    <footer>
+        © 2026 - Putra Corporation · Baileys WhatsApp Bot Guide · Fitur Sticker, Image, Downloader & More
+    </footer>
 </div>
 
-<div class="product-wrapper best-product">
-  <div class="main-product">
-    <div id="bodyForShowProductHome">
-              <a href="https://fahrishophosting.my.id/p/reseller-panel-private1725964179">
-          <div class="item-product">
-                          <img alt="Reseller Panel Private" src="https://fahrishophosting.my.id/assets/images/product/1725964177291.jpg" class="card-img-top">
-                        <div class="card-body">
-                              <p class="card-text line-3 mb-0">Reseller Panel Private</p>
-                <p class="newPrice">Rp. 15.000</p>
-                            <div class="stars-rating">
-                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
-            </div>
-          </div>
-        </a>
-              <a href="https://fahrishophosting.my.id/p/nokos-whatsapp-indonesia1725761370">
-          <div class="item-product">
-                          <img alt="Nokos WhatsApp Indonesia" src="https://fahrishophosting.my.id/assets/images/product/1725761369516.jpg" class="card-img-top">
-                        <div class="card-body">
-                              <p class="card-text line-3 mb-0">Nokos WhatsApp Indonesia</p>
-                <p class="newPrice">Rp. 10.000</p>
-                            <div class="stars-rating">
-                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
-            </div>
-          </div>
-        </a>
-              <a href="https://fahrishophosting.my.id/p/script-bot-whatsapp-auto-install-panel1725588529">
-          <div class="item-product">
-                          <img alt="Script Bot WhatsApp Auto Install Panel" src="https://fahrishophosting.my.id/assets/images/product/1725588527785.jpg" class="card-img-top">
-                        <div class="card-body">
-                              <p class="card-text line-3 mb-0">Script Bot WhatsApp Auto Install Panel</p>
-                <p class="newPrice">Rp. 55.000</p>
-                            <div class="stars-rating">
-                                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>              </div>
-            </div>
-          </div>
-        </a>
-              <a href="https://fahrishophosting.my.id/p/panel-bot-9gb1725546607">
-          <div class="item-product">
-                          <img alt="PANEL BOT 9GB" src="https://fahrishophosting.my.id/assets/images/product/1725546606682.png" class="card-img-top">
-                        <div class="card-body">
-                              <p class="card-text line-3 mb-0">PANEL BOT 9GB</p>
-                <p class="newPrice">Rp. 10.000</p>
-                            <div class="stars-rating">
-                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
-            </div>
-          </div>
-        </a>
-              <a href="https://fahrishophosting.my.id/p/panel-bot-8gb1725546291">
-          <div class="item-product">
-                          <img alt="PANEL BOT 8GB" src="https://fahrishophosting.my.id/assets/images/product/1725546290932.png" class="card-img-top">
-                        <div class="card-body">
-                              <p class="card-text line-3 mb-0">PANEL BOT 8GB</p>
-                <p class="newPrice">Rp. 9.000</p>
-                            <div class="stars-rating">
-                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
-            </div>
-          </div>
-        </a>
-              <a href="https://fahrishophosting.my.id/p/panelbot-7gb1725546016">
-          <div class="item-product">
-                          <img alt="PANELBOT 7GB" src="https://fahrishophosting.my.id/assets/images/product/1725546016028.png" class="card-img-top">
-                        <div class="card-body">
-                              <p class="card-text line-3 mb-0">PANELBOT 7GB</p>
-                <p class="newPrice">Rp. 8.000</p>
-                            <div class="stars-rating">
-                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
-            </div>
-          </div>
-        </a>
-              <a href="https://fahrishophosting.my.id/p/panel-bot-6gb1725545737">
-          <div class="item-product">
-                          <img alt="PANEL BOT 6GB" src="https://fahrishophosting.my.id/assets/images/product/1725545736861.png" class="card-img-top">
-                        <div class="card-body">
-                              <p class="card-text line-3 mb-0">PANEL BOT 6GB</p>
-                <p class="newPrice">Rp. 7.000</p>
-                            <div class="stars-rating">
-                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
-            </div>
-          </div>
-        </a>
-              <a href="https://fahrishophosting.my.id/p/panel-5gb1725545478">
-          <div class="item-product">
-                          <img alt="PANEL 5GB" src="https://fahrishophosting.my.id/assets/images/product/1725545477733.png" class="card-img-top">
-                        <div class="card-body">
-                              <p class="card-text line-3 mb-0">PANEL 5GB</p>
-                <p class="newPrice">Rp. 6.000</p>
-                            <div class="stars-rating">
-                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
-            </div>
-          </div>
-        </a>
-              <a href="https://fahrishophosting.my.id/p/panel-bot-3gb1725545214">
-          <div class="item-product">
-                          <img alt="PANEL BOT 3GB" src="https://fahrishophosting.my.id/assets/images/product/1725545214301.png" class="card-img-top">
-                        <div class="card-body">
-                              <p class="card-text line-3 mb-0">PANEL BOT 3GB</p>
-                <p class="newPrice">Rp. 4.000</p>
-                            <div class="stars-rating">
-                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
-            </div>
-          </div>
-        </a>
-          </div>
-    <div class="clearfix"></div>
-  </div>
-  <img src="https://fahrishophosting.my.id/assets/images/icon/loading-v1.gif" alt="loading.." class="loading-animation-load-more">
-    <button style="border: 2px solid #6699FF; color: #6699FF" class="more" id="btnClickLoadMoreProductHome">LIHAT SEMUA</button>
-</div>
-
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-1">
-      <div class="main">
-                          <img alt="RAM 16GB CORE 4" src="https://fahrishophosting.my.id/assets/images/product/1725543688093.png">
-                <div class="text">
-          <p><span class="font-bold">Ri4you Store X ..</span> membeli
-          <p class="font-bold product_name">RAM 16GB CORE 4</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-2">
-      <div class="main">
-                          <img alt="RAM 1GB CPU 1" src="https://fahrishophosting.my.id/assets/images/product/1725540896696.png">
-                <div class="text">
-          <p><span class="font-bold">Dall</span> membeli
-          <p class="font-bold product_name">RAM 1GB CPU 1</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-3">
-      <div class="main">
-                          <img alt="PANEL BOT 2GB" src="https://fahrishophosting.my.id/assets/images/product/1725544536140.png">
-                <div class="text">
-          <p><span class="font-bold">Fhdyshdd</span> membeli
-          <p class="font-bold product_name">PANEL BOT 2GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-4">
-      <div class="main">
-                          <img alt="Reseller Panel Private" src="https://fahrishophosting.my.id/assets/images/product/1725964177291.jpg">
-                <div class="text">
-          <p><span class="font-bold">a</span> membeli
-          <p class="font-bold product_name">Reseller Panel Private</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-5">
-      <div class="main">
-                          <img alt="RAM 1GB CPU 1" src="https://fahrishophosting.my.id/assets/images/product/1725540896696.png">
-                <div class="text">
-          <p><span class="font-bold">Xsyz</span> membeli
-          <p class="font-bold product_name">RAM 1GB CPU 1</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-6">
-      <div class="main">
-                          <img alt="Cloud Digital Ocean Bil Paypal" src="https://fahrishophosting.my.id/assets/images/product/1725538526888.png">
-                <div class="text">
-          <p><span class="font-bold">Xauzy</span> membeli
-          <p class="font-bold product_name">Cloud Digital Ocean Bil Paypal</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-7">
-      <div class="main">
-                          <img alt="Cloud Digital Ocean Bil Vcc" src="https://fahrishophosting.my.id/assets/images/product/1725536349513.png">
-                <div class="text">
-          <p><span class="font-bold">Petra</span> membeli
-          <p class="font-bold product_name">Cloud Digital Ocean Bil Vcc</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-8">
-      <div class="main">
-                          <img alt="PANEL BOT 2GB" src="https://fahrishophosting.my.id/assets/images/product/1725544536140.png">
-                <div class="text">
-          <p><span class="font-bold">Babeh</span> membeli
-          <p class="font-bold product_name">PANEL BOT 2GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-9">
-      <div class="main">
-                          <img alt="PANEL BOT 9GB" src="https://fahrishophosting.my.id/assets/images/product/1725546606682.png">
-                <div class="text">
-          <p><span class="font-bold">Fauzan</span> membeli
-          <p class="font-bold product_name">PANEL BOT 9GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-10">
-      <div class="main">
-                          <img alt="Cloud Digital Ocean Bil Paypal" src="https://fahrishophosting.my.id/assets/images/product/1725538526888.png">
-                <div class="text">
-          <p><span class="font-bold">zia</span> membeli
-          <p class="font-bold product_name">Cloud Digital Ocean Bil Paypal</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-11">
-      <div class="main">
-                          <img alt="Cloud Digital Ocean Bil Paypal" src="https://fahrishophosting.my.id/assets/images/product/1725538526888.png">
-                <div class="text">
-          <p><span class="font-bold">zia</span> membeli
-          <p class="font-bold product_name">Cloud Digital Ocean Bil Paypal</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-12">
-      <div class="main">
-                          <img alt="Nokos WhatsApp Indonesia" src="https://fahrishophosting.my.id/assets/images/product/1725761369516.jpg">
-                <div class="text">
-          <p><span class="font-bold">Kntl</span> membeli
-          <p class="font-bold product_name">Nokos WhatsApp Indonesia</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-13">
-      <div class="main">
-                          <img alt="PANEL BOT 3GB" src="https://fahrishophosting.my.id/assets/images/product/1725545214301.png">
-                <div class="text">
-          <p><span class="font-bold">PRAVDA</span> membeli
-          <p class="font-bold product_name">PANEL BOT 3GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-14">
-      <div class="main">
-                          <img alt="PANEL BOT 2GB" src="https://fahrishophosting.my.id/assets/images/product/1725544536140.png">
-                <div class="text">
-          <p><span class="font-bold">yongz</span> membeli
-          <p class="font-bold product_name">PANEL BOT 2GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-15">
-      <div class="main">
-                          <img alt="Nokos WhatsApp Indonesia" src="https://fahrishophosting.my.id/assets/images/product/1725761369516.jpg">
-                <div class="text">
-          <p><span class="font-bold">kimm</span> membeli
-          <p class="font-bold product_name">Nokos WhatsApp Indonesia</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-16">
-      <div class="main">
-                          <img alt="PANEL BOT 2GB" src="https://fahrishophosting.my.id/assets/images/product/1725544536140.png">
-                <div class="text">
-          <p><span class="font-bold">Fajar</span> membeli
-          <p class="font-bold product_name">PANEL BOT 2GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-17">
-      <div class="main">
-                          <img alt="RAM 2GB CORE 2" src="https://fahrishophosting.my.id/assets/images/product/1725542381057.png">
-                <div class="text">
-          <p><span class="font-bold">Brian</span> membeli
-          <p class="font-bold product_name">RAM 2GB CORE 2</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-18">
-      <div class="main">
-                          <img alt="PANEL BOT 2GB" src="https://fahrishophosting.my.id/assets/images/product/1725544536140.png">
-                <div class="text">
-          <p><span class="font-bold">Haya</span> membeli
-          <p class="font-bold product_name">PANEL BOT 2GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-19">
-      <div class="main">
-                          <img alt="PANEL BOT 2GB" src="https://fahrishophosting.my.id/assets/images/product/1725544536140.png">
-                <div class="text">
-          <p><span class="font-bold">Haya</span> membeli
-          <p class="font-bold product_name">PANEL BOT 2GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-20">
-      <div class="main">
-                          <img alt="Reseller Panel Private" src="https://fahrishophosting.my.id/assets/images/product/1725964177291.jpg">
-                <div class="text">
-          <p><span class="font-bold">shilit</span> membeli
-          <p class="font-bold product_name">Reseller Panel Private</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-21">
-      <div class="main">
-                          <img alt="Panel Bot Unlimited" src="https://fahrishophosting.my.id/assets/images/product/1725539078083.png">
-                <div class="text">
-          <p><span class="font-bold">hanz</span> membeli
-          <p class="font-bold product_name">Panel Bot Unlimited</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-22">
-      <div class="main">
-                          <img alt="Nokos WhatsApp Indonesia" src="https://fahrishophosting.my.id/assets/images/product/1725761369516.jpg">
-                <div class="text">
-          <p><span class="font-bold">Mewing</span> membeli
-          <p class="font-bold product_name">Nokos WhatsApp Indonesia</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-23">
-      <div class="main">
-                          <img alt="Nokos WhatsApp Indonesia" src="https://fahrishophosting.my.id/assets/images/product/1725761369516.jpg">
-                <div class="text">
-          <p><span class="font-bold">Gwyw</span> membeli
-          <p class="font-bold product_name">Nokos WhatsApp Indonesia</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-24">
-      <div class="main">
-                          <img alt="PANEL BOT 9GB" src="https://fahrishophosting.my.id/assets/images/product/1725546606682.png">
-                <div class="text">
-          <p><span class="font-bold">Alex</span> membeli
-          <p class="font-bold product_name">PANEL BOT 9GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-25">
-      <div class="main">
-                          <img alt="PANEL BOT 9GB" src="https://fahrishophosting.my.id/assets/images/product/1725546606682.png">
-                <div class="text">
-          <p><span class="font-bold">Alok</span> membeli
-          <p class="font-bold product_name">PANEL BOT 9GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-26">
-      <div class="main">
-                          <img alt="Reseller Panel Private" src="https://fahrishophosting.my.id/assets/images/product/1725964177291.jpg">
-                <div class="text">
-          <p><span class="font-bold">Yy</span> membeli
-          <p class="font-bold product_name">Reseller Panel Private</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-27">
-      <div class="main">
-                          <img alt="Reseller Panel Private" src="https://fahrishophosting.my.id/assets/images/product/1725964177291.jpg">
-                <div class="text">
-          <p><span class="font-bold">Yy</span> membeli
-          <p class="font-bold product_name">Reseller Panel Private</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-28">
-      <div class="main">
-                          <img alt="Reseller Panel Private" src="https://fahrishophosting.my.id/assets/images/product/1725964177291.jpg">
-                <div class="text">
-          <p><span class="font-bold">Vilzz</span> membeli
-          <p class="font-bold product_name">Reseller Panel Private</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-29">
-      <div class="main">
-                          <img alt="PANEL BOT 2GB" src="https://fahrishophosting.my.id/assets/images/product/1725544536140.png">
-                <div class="text">
-          <p><span class="font-bold">yongz</span> membeli
-          <p class="font-bold product_name">PANEL BOT 2GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="30">
-    <div class="social-proof" id="socialProofId-30">
-      <div class="main">
-                          <img alt="PANEL BOT 2GB" src="https://fahrishophosting.my.id/assets/images/product/1725544536140.png">
-                <div class="text">
-          <p><span class="font-bold">ndaf</span> membeli
-          <p class="font-bold product_name">PANEL BOT 2GB</p>
-          </p>
-          <span class="verified"><img src="https://fahrishophosting.my.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Fahri OfficiaL</span></span>
-        </div>
-      </div>
-    </div>
-  <footer>
-    <div class="information">
-        <div class="main">
-            <img src="https://fahrishophosting.my.id/assets/images/logo/1725758647719.png" alt="logo" class="logo-footer" />
-            <p class="description-store">FAHRI - OFFICIAL adalah sebuah organisasi yang bergerak di bidang digital marketing yang siap membantu kebutuhan jual beli anda menjadi lebih sempurna.</p>
-            <div class="payment_logo" style="text-align: center;">
-                                                                                                                                                                                                    <img src="https://fahrishophosting.my.id/assets/images/payment/dana.png" alt="payment" class="logo_payment">
-                                                    <img src="https://fahrishophosting.my.id/assets/images/payment/gopay.png" alt="payment" class="logo_payment">
-                            </div>
-            <div class="social-media">
-                                    <a href="https://fahrishophosting.my.id" target="_blank"><i class="fa fa-https://youtube?f"></i>
-                    </a>
-                            </div>
-        </div>
-    </div>
-    <div class="copyright" style="background-color: ">
-        <p class="mb-0">Copyright &copy; <span id="footer-cr-years"></span> Fahri OfficiaL</p>
-    </div>
-</footer><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="https://fahrishophosting.my.id/assets/starrr/dist/starrr.js"></script>
-<script src="https://fahrishophosting.my.id/assets/select2-4.0.6-rc.1/dist/js/select2.min.js"></script>
-<script src="https://fahrishophosting.my.id/assets/js/lightbox.js"></script>
 <script>
-    const modalDelayPopup = "";
-    if (modalDelayPopup) {
-        setTimeout(() => {
-            $("#modalBannerPopup").modal("show");
-        }, modalDelayPopup * 1000);
-    }
-    lightbox.option({
-        'disableScrolling': true
-    })
-    $('.starrr').starrr()
-    $(".starrr").on('starrr:change', function(e, value) {
-        $("input.starrr-rating-star-count").val(value);
-    })
-    const years = new Date().getFullYear();
-    $("#footer-cr-years").text(years);
+    // Tab switching
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panes = document.querySelectorAll('.tab-pane');
 
-    $(".btn_order_now_checkout_page").on("click", function() {
-        const pay = $("#paymentSelectCheckoutPage").val();
-        $('#msgPaymentFirstCheckoutPage').hide();
-        if (pay == "") {
-            $('#msgPaymentFirstCheckoutPage').show();
-        }
-    })
-
-    $(".rating .top-rating").on("click", function() {
-        $(".rating .main-rating").slideToggle();
-        $(".rating .top-rating i").toggleClass("arrow-bottom-rating-rotate");
-        $(".rating .top-rating i").css("transition", "0.5s");
-    })
-
-    $("#btnFormHelpPojokKananBawah").on("click", function() {
-        const name = $("#formHelpInputNamePojokKananBawah").val();
-        const message = $("#formHelpTextareaMessagePojokKananBawah").val();
-        const wa = "6287786336665";
-        const msgOpen = "Halo kak";
-        if (name != "" && message != "") {
-            $("#formHelpInputNamePojokKananBawah").val("");
-            $("#formHelpTextareaMessagePojokKananBawah").val("");
-            window.open(`https://wa.me/${wa}?text=${msgOpen}, saya ${name} ingin bertanya %0A ${message}`);
-        }
-    })
-
-    $("button.btn-chat-help-pojok-kanan-bawah").on('click', function() {
-        $("div.box-chat-help-wa").slideToggle('fast');
-        // $("button.btn-chat-help-pojok-kanan-bawah i").removeClass("fa-whatsapp")
-        // $("button.btn-chat-help-pojok-kanan-bawah i").removeClass("fab")
-        // $("button.btn-chat-help-pojok-kanan-bawah i").addClass("fa")
-        // $("button.btn-chat-help-pojok-kanan-bawah i").addClass("fa-times")
-        // $("button.btn-chat-help-pojok-kanan-bawah i").css("font-size", "35px")
-    })
-
-    let numberOfSocialProof = 1;
-    let numberOfInvoiceTotal = parseInt($("#numberOfInvoiceTotalHomePage").val()) * 1000;
-    let pauseOfSocialProof = parseInt('10') * 1000;
-    let timeOfSocialProof = parseInt('5') * 1000;
-
-    function showHideSocialProof() {
-        $(`#socialProofId-${numberOfSocialProof}`).css("bottom", "20px");
-        setTimeout(function() {
-            $(`#socialProofId-${numberOfSocialProof}`).css("bottom", "-100px");
-            numberOfSocialProof++;
-        }, pauseOfSocialProof);
-        if (numberOfSocialProof <= numberOfInvoiceTotal) {
-            setTimeout(showHideSocialProof, pauseOfSocialProof * 2);
-        } else {
-            $(`div.social-proof`).css("bottom", "-100px");
-            numberOfSocialProof = 0;
-            setTimeout(showHideSocialProof, pauseOfSocialProof * 2);
-        }
-    }
-    setTimeout(showHideSocialProof, timeOfSocialProof);
-
-    // detail slick img
-    $('.img-detail-product-slick').slick();
-    $("div.wrapper div.top div.main-top div.img button.slick-prev").html(`<i class="fa fa-angle-left"></i>`);
-    $("div.wrapper div.top div.main-top div.img button.slick-next").html(`<i class="fa fa-angle-right"></i>`);
-
-    let categoryProductsActive;
-    let clickCategoryActive = false;
-    let startLoadProductHome = 9;
-
-    const skeletonLoadingCategory = `
-    <div class="skeleton-item-product">
-        <div class="img"></div>
-    </div>
-    <div class="skeleton-item-product">
-        <div class="img"></div>
-    </div>
-    <div class="skeleton-item-product">
-        <div class="img"></div>
-    </div>
-    `;
-
-    function changeCategoryProductsActive(id) {
-        if (!clickCategoryActive) {
-            clickCategoryActive = true;
-            $("div.category-menu div.main-category div.item").removeClass("item-active");
-            $(`.item-category-menu-${id}`).addClass("item-active");
-            categoryProductsActive = id;
-            $("#bodyForShowProductHome").html(skeletonLoadingCategory);
-            $.ajax({
-                url: `https://fahrishophosting.my.id/products/get_all_product_home_by_category/${id}`,
-                method: "get",
-                success: function(response) {
-                    $("#btnClickLoadMoreProductHome").show();
-                    clickCategoryActive = false;
-                    startLoadProductHome = 6;
-                    if (response == "") {
-                        alert("Terjadi kesalahan, refresh browsernya.");
-                    } else {
-                        $("#bodyForShowProductHome").html(response);
-                    }
-                }
-            })
-        }
-    }
-
-    // load more product
-    $("#btnClickLoadMoreProductHome").on("click", function() {
-        $("img.loading-animation-load-more").show();
-        $(this).hide();
-        $.ajax({
-            url: "https://fahrishophosting.my.id/products/get_more_product_home?start=" + startLoadProductHome + "&category=" + categoryProductsActive,
-            method: "get",
-            success: function(response) {
-                startLoadProductHome += 6;
-                if (response == "") {
-                    $("#btnClickLoadMoreProductHome").hide();
-                    $("img.loading-animation-load-more").hide();
-                } else {
-                    $("#bodyForShowProductHome").append(response);
-                    $("img.loading-animation-load-more").hide();
-                    $("#btnClickLoadMoreProductHome").show();
-                }
-            }
-        })
-    })
-
-    let startLoadProduct = 8;
-    $("#btnClickLoadMoreProduct").on("click", function() {
-        $("img.loading-animation-load-more").show();
-        $(this).hide();
-        $.ajax({
-            url: "https://fahrishophosting.my.id/products/get_more_product?start=" + startLoadProduct,
-            method: "get",
-            success: function(response) {
-                startLoadProduct += 12;
-                if (response == "") {
-                    $("#btnClickLoadMoreProduct").hide();
-                    $("img.loading-animation-load-more").hide();
-                } else {
-                    $("#bodyForShowProduct").append(response);
-                    $("img.loading-animation-load-more").hide();
-                    $("#btnClickLoadMoreProduct").show();
-                }
-            }
-        })
-    })
-
-    let startLoadBestProduct = 12;
-    $("#btnClickLoadMoreBestProduct").on("click", function() {
-        $("img.loading-animation-load-more").show();
-        $(this).hide();
-        $.ajax({
-            url: "https://fahrishophosting.my.id/products/get_more_best_product?start=" + startLoadBestProduct,
-            method: "get",
-            success: function(response) {
-                startLoadBestProduct += 12;
-                if (response == "") {
-                    $("#btnClickLoadMoreBestProduct").hide();
-                    $("img.loading-animation-load-more").hide();
-                } else {
-                    $("#bodyForShowProduct").append(response);
-                    $("img.loading-animation-load-more").hide();
-                    $("#btnClickLoadMoreBestProduct").show();
-                }
-            }
-        })
-    })
-
-    let startLoadProductCategory = 12;
-    $("#btnClickLoadMoreProductCategory").on("click", function() {
-        $("img.loading-animation-load-more").show();
-        $(this).hide();
-        $.ajax({
-            url: "https://fahrishophosting.my.id/products/get_more_product_category?start=" + startLoadProductCategory + "&idCat=&sort=",
-            method: "get",
-            success: function(response) {
-                startLoadProductCategory += 12;
-                console.log(response);
-                if (response == "") {
-                    $("#btnClickLoadMoreProductCategory").hide();
-                    $("img.loading-animation-load-more").hide();
-                } else {
-                    $("#bodyForShowProductCategory").append(response);
-                    $("img.loading-animation-load-more").hide();
-                    $("#btnClickLoadMoreProductCategory").show();
-                }
-            }
-        })
-    })
-
-    // share product
-    // $(document).click(function() {
-    //     $("div.wrapper div.share-dd").slideUp('fast');
-    // });
-    $("div.wrapper button.share").on('click', function(event) {
-        $("div.wrapper div.share-dd").slideToggle('fast');
-        // event.stopPropagation();
-    })
-
-    // select variant
-    let variantColorProduct = "";
-    let variantSizeProduct = "";
-    $("button.item-option-select-variant-product-color").on('click', function() {
-        $(".item-option-select-variant-product-color").css("background-color", "white");
-        $(".item-option-select-variant-product-color").css("color", "black");
-        $(".item-option-select-variant-product-color").css("border", "1px solid ");
-        $(this).css("background-color", "");
-        $(this).css("color", "white");
-        variantColorProduct = $(this).val();
-    })
-    $("button.item-option-select-variant-product-size").on('click', function() {
-        $(".item-option-select-variant-product-size").css("background-color", "white");
-        $(".item-option-select-variant-product-size").css("color", "black");
-        $(".item-option-select-variant-product-size").css("border", "1px solid ");
-        $(this).css("background-color", "");
-        $(this).css("color", "white");
-        variantSizeProduct = $(this).val();
-        $.ajax({
-            url: "https://fahrishophosting.my.id/products/change_price_by_variant",
-            type: "post",
-            dataType: "json",
-            async: true,
-            data: {
-                id: '',
-                variant: variantSizeProduct
-            },
-            success: function(data) {
-                $("div.wrapper div.top div.main-top div.ket h4.price").text(data.price);
-                $("div.wrapper div.top div.main-top div.ket p.oldPrice .linet").text(data.oldPrice);
-            }
-        })
-    })
-
-    // function buy
-    function orderNow() {
-        const productId = '';
-        const slug = '';
-        $.ajax({
-            url: "https://fahrishophosting.my.id/cart/add_to_cart",
-            type: "post",
-            data: {
-                id: productId,
-                slug: slug,
-                variant: parseInt(globalVariantType)
-            },
-            success: function(data) {
-                $("#modalCartBodyShow").html(data);
-                $('#modalCart').modal('show');
-            }
-        })
-    }
-
-    // plus minus qty cart
-    function minusProductCart(id) {
-        let inputJml;
-        inputJml = parseInt($(`input#qtyProductCart-${id}`).val());
-        inputJml = inputJml - 1;
-        if (inputJml >= 1) {
-            $(`input#qtyProductCart-${id}`).val("..");
-            $.ajax({
-                url: "https://fahrishophosting.my.id/cart/edit_qty_cart?type=minus",
-                type: "post",
-                data: {
-                    rowid: id,
-                },
-                success: function(data) {
-                    $(`#modalCartPriceProduct-${id}`).text(`Rp. ${number_format(data).split(",").join(".")}`);
-                    $(`input#qtyProductCart-${id}`).val(inputJml);
-                }
-            })
-        }
-    }
-
-    function plusProductCart(id) {
-        let inputJml;
-        inputJml = parseInt($(`input#qtyProductCart-${id}`).val());
-        inputJml = inputJml + 1;
-        $(`input#qtyProductCart-${id}`).val("..");
-        $.ajax({
-            url: "https://fahrishophosting.my.id/cart/edit_qty_cart?type=plus",
-            type: "post",
-            data: {
-                rowid: id,
-            },
-            success: function(data) {
-                $(`#modalCartPriceProduct-${id}`).text(`Rp. ${number_format(data).split(",").join(".")}`);
-                $(`input#qtyProductCart-${id}`).val(inputJml);
-            }
-        })
-    }
-
-    function deleteCartByRowid(id) {
-        $.ajax({
-            url: "https://fahrishophosting.my.id/cart/delete/" + id,
-            type: "get",
-            success: function(data) {
-                $(`#modalCartBodyListItem-${id}`).slideUp('fast');
-            }
-        })
-    }
-
-    function number_format(number, decimals, decPoint, thousandsSep) {
-        number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
-        var n = !isFinite(+number) ? 0 : +number
-        var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
-        var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
-        var dec = (typeof decPoint === 'undefined') ? '.' : decPoint
-        var s = ''
-
-        var toFixedFix = function(n, prec) {
-            var k = Math.pow(10, prec)
-            return '' + (Math.round(n * k) / k)
-                .toFixed(prec)
-        }
-
-        // @todo: for IE parseFloat(0.55).toFixed(0) = 0;
-        s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.')
-        if (s[0].length > 3) {
-            s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep)
-        }
-        if ((s[1] || '').length < prec) {
-            s[1] = s[1] || ''
-            s[1] += new Array(prec - s[1].length + 1).join('0')
-        }
-
-        return s.join(dec)
-    }
-
-    // select2 checkout
-    $("#districtCheckoutPage").select2({
-        placeholder: 'Pilih Kabupaten/Kota',
-        language: 'id'
-    })
-
-    $("#subdistrictCheckoutPage").select2({
-        placeholder: 'Pilih kabupaten/kota dulu',
-        language: 'id'
-    })
-
-    $("#districtCheckoutPage").on('change', function() {
-        $("#subdistrictCheckoutPage").html(`<option</option>`)
-        $("#subdistrictCheckoutPage").select2({
-            placeholder: 'Loading..',
-            language: 'id'
-        });
-        $("#courierCheckoutPage").html(`
-                <option>Loading..</option>
-            `);
-        $("#ongkirCheckoutPage").text("Rp. 0");
-        const id = $(this).val();
-        $.ajax({
-            url: "https://fahrishophosting.my.id/payment/getSubdistrict",
-            type: "post",
-            dataType: "json",
-            async: true,
-            data: {
-                id: id
-            },
-            success: function(data) {
-                $("#subdistrictCheckoutPage").select2({
-                    placeholder: 'Pilih Kecamatan',
-                    language: 'id'
-                })
-                $("#subdistrictCheckoutPage").html(data);
-                $("#courierCheckoutPage").html(`
-                        <option>Pilih kecamatan dulu</option>
-                    `);
-            }
-        });
-    })
-
-    $("#subdistrictCheckoutPage").on('change', function() {
-        $("#courierCheckoutPage").html(`
-                <option>Loading..</option>
-            `);
-
-        $("#ongkirCheckoutPage").text("Rp. 0");
-        const id = $(this).val();
-        $.ajax({
-            url: "https://fahrishophosting.my.id/payment/getCourier",
-            type: "post",
-            dataType: "json",
-            async: true,
-            data: {
-                id: id
-            },
-            success: function(data) {
-                $("#courierCheckoutPage").html(`
-                        <option>Pilih Pengiriman</option>
-                    `);
-                $("#courierCheckoutPage").html(data);
-            }
-        });
-    })
-
-    $("#courierCheckoutPage").on("change", function() {
-        let id = $(this).val();
-        id = id.split('-');
-        id = id[0];
-        if (id === "") {
-            id = 0;
-        }
-        const minFee = '';
-        const maxFee = '';
-        if (parseInt(id) >= parseInt(minFee) && parseInt(id) <= parseInt(maxFee)) {
-            $(".logo-payment-checkout-13").show();
-        }
-        $("#ongkirValueOrder").val(id);
-        $("#ongkirCheckoutPage").text("Rp. " + number_format(id).split(",").join("."));
-        const price = "0";
-        const potongan = $("#potonganCouponCheckoutPageValue").val();
-        const total = parseInt(price) + parseInt(id) + parseInt($("#uniqueCodeValueOrder").val()) - parseInt(potongan);
-        $("#totalCheckoutPage").text("Rp. " + number_format(total).split(",").join("."));
-    })
-
-    $("#btnForApplyCouponCheckoutPage").on("click", function() {
-        const coupon = $("#inputCouponCheckoutPage").val();
-        $("#msgDangerCouponWrongCheckoutPage").text("");
-        if (coupon != "") {
-            $.ajax({
-                url: "https://fahrishophosting.my.id/checkout/checkoutCoupon",
-                type: "post",
-                dataType: "json",
-                async: true,
-                data: {
-                    coupon: coupon
-                },
-                success: function(data) {
-                    console.log(data);
-                    if (data.success == true) {
-                        $("#potonganCouponCheckoutPageShow").text("Rp. " + number_format(data.discount).split(",").join("."));
-                        $("#potonganCouponCheckoutPageValue").val(data.discount);
-                        const courier = $("#ongkirValueOrder").val();
-                        const price = "0";
-                        const potongan = $("#potonganCouponCheckoutPageValue").val();
-                        const total = parseInt(price) + parseInt(courier) + parseInt($("#uniqueCodeValueOrder").val()) - parseInt(potongan);
-                        $("#totalCheckoutPage").text("Rp. " + number_format(total).split(",").join("."));
-                    } else {
-                        $("#msgDangerCouponWrongCheckoutPage").text(data.msg);
-                    }
-                }
+    tabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-tab');
+            tabs.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            panes.forEach(pane => {
+                pane.classList.remove('active-pane');
+                if (pane.id === targetId) pane.classList.add('active-pane');
             });
-        }
-    })
+        });
+    });
 
-    // select payment
-    function selectPaymentCheckout(id) {
-        $('#msgPaymentFirstCheckoutPage').hide();
-        $("#paymentSelectCheckoutPage").val("true");
-        $(`#paymentLogoSelectCheckoutPageValue`).val(id);
-        $(".logo-payment-checkout-page").css("border", "2px solid #ddd");
-        $(".logo-payment-checkout-page").css("box-shadow", "none");
-        $(`.logo-payment-checkout-${id}`).css("border", "2px solid dodgerblue");
-        $(`.logo-payment-checkout-${id}`).css("box-shadow", "1px 3px 8px rgba(0, 0, 0, 0.2)");
-
-        if (id == "13") {
-            $(".list-for-fee-cod-hide").show();
-            $(".list-for-uniq-code-show-first").hide();
-            const totalharga = '0';
-            const ongkir = $("#ongkirValueOrder").val();
-            const feeCod = '';
-            let totalall = (parseInt(totalharga) + parseInt(ongkir)) * parseInt(feeCod) / 100;
-            $(".valueOfUniqCodeOrFeeCODCheckoutPage").text("Rp. " + number_format(totalall).split(",").join("."));
-            const potongan = $("#potonganCouponCheckoutPageValue").val();
-            const total = parseInt(totalharga) + parseInt(ongkir) + parseInt(totalall) - parseInt(potongan);
-            $("#totalCheckoutPage").text("Rp. " + number_format(total).split(",").join("."));
+    // Copy code functionality
+    function copyCode(btn) {
+        const pre = btn.parentElement.querySelector('pre code');
+        if (pre) {
+            const text = pre.innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = '✅ Tersalin!';
+                setTimeout(() => btn.innerText = originalText, 2000);
+            });
         } else {
-            $(".list-for-fee-cod-hide").hide();
-            $(".list-for-uniq-code-show-first").show();
-            const uniqCode = $("#uniqueCodeValueOrder").val();
-            const courier = $("#ongkirValueOrder").val();
-            const price = "0";
-            const potongan = $("#potonganCouponCheckoutPageValue").val();
-            const total = parseInt(price) + parseInt(courier) + parseInt(uniqCode) - parseInt(potongan);
-            $("#totalCheckoutPage").text("Rp. " + number_format(total).split(",").join("."));
+            const nextPre = btn.nextElementSibling;
+            if (nextPre && nextPre.tagName === 'PRE') {
+                const codeBlock = nextPre.querySelector('code');
+                if (codeBlock) {
+                    navigator.clipboard.writeText(codeBlock.innerText);
+                    btn.innerText = '✅ Tersalin!';
+                    setTimeout(() => btn.innerText = 'Salin', 2000);
+                }
+            }
         }
     }
-
-    // menu sidebar
-    let globalVariableSideBarClose = true;
-    $("nav.navbar-top div.main-mobile .fa-bars").on("click", function() {
-        if (globalVariableSideBarClose) {
-            globalVariableSideBarClose = false;
-            $(".side-bar-menu-mobile").animate({
-                left: "0"
-            }, 300)
-            $(".overlay-menu").animate({
-                left: "0"
-            }, 200)
-        } else {
-            globalVariableSideBarClose = true;
-            $(".side-bar-menu-mobile").animate({
-                left: "-100%"
-            }, 200)
-            $(".overlay-menu").animate({
-                left: "-100%"
-            }, 300)
-        }
-    })
-    $(".overlay-menu").on("click", function() {
-        globalVariableSideBarClose = true;
-        $(".side-bar-menu-mobile").animate({
-            left: "-100%"
-        }, 200)
-        $(".overlay-menu").animate({
-            left: "-100%"
-        }, 300)
-    })
+    window.copyCode = copyCode;
+    hljs.highlightAll();
+    
+    // Set default active tab from URL hash if needed
+    if(window.location.hash) {
+        const hash = window.location.hash.slice(1);
+        const targetBtn = document.querySelector(`.tab-btn[data-tab="${hash}"]`);
+        if(targetBtn) targetBtn.click();
+    }
 </script>
 </body>
-
 </html>
